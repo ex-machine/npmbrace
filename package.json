@@ -1,6 +1,6 @@
 {
   "name": "npmbrace",
-  "version": "",
+  "version": "0.1.0",
   "description": "Node Package Manager with brace expansion that switches between NPM2, NPM3 and NPM4",
   "main": "index.js",
   "bin": {
