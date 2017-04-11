@@ -10,7 +10,9 @@ Additionally, `npmbrace` allows to switch between NPM2, NPM3 and NPM4 versions o
 
 ## Installation
 
+```
 npm i -g npmbrace
+```
 
 ## Usage
 
