@@ -1,0 +1,41 @@
+{
+  "name": "npmbrace",
+  "version": "",
+  "description": "Node Package Manager with brace expansion that switches between NPM2, NPM3 and NPM4",
+  "main": "index.js",
+  "bin": {
+    "npmb": "bin/npmb.js",
+    "npmbrace": "bin/npmbrace.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+    "npm": ">=2.0.0"
+  },
+  "author": "bisubus",
+  "license": "MIT",
+  "homepage": "https://github.com/ex-machine/npmbrace",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-machine/npmbrace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ex-machine/npmbrace/issues"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "dependencies": {
+    "braces": "2.0.3",
+    "node-alias": "^1.0.4",
+    "npm-2": "^2.15.0",
+    "npm-cli-path": "1.0.0",
+    "npm3": "^1.1.1",
+    "npm4": "^1.0.0",
+    "pify": "2.3.0",
+    "pinkie-promise": "2.0.1",
+    "read-package-json": "2.0.5"
+  }
+}
