@@ -52,16 +52,13 @@ module.exports = function (args) {
 			var npmBinPath = data.bin[npmBin];
 
 			assert.ok(npmBinPath, 'npmBinPath');
-
-			// console.log(path.join(npmPackage, npmBinPath));
+			
 			return require.resolve(path.join(npmPackage, npmBinPath));
-		})
+		});
 	}
 
-	npmPathPromise.then(function (npmPath) {
-		// console.log(process.execPath, [npmPath].concat(expandedArgs));
-		// return;
-
+	npmPathPromise
+	.then(function (npmPath) {
 		spawn(process.execPath, [npmPath].concat(expandedArgs), { stdio: 'inherit' })
 		.on('exit', function (code) {
 			process.exit(code);
