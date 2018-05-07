@@ -2,4 +2,4 @@
 
 'use strict';
 
-require('node-alias')('npmb', __dirname);
+require('node-alias')('nb', __dirname);

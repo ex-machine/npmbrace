@@ -1,10 +1,15 @@
 {
   "name": "npmbrace",
-  "version": "0.1.1",
-  "description": "Node Package Manager with brace expansion that switches between NPM2, NPM3 and NPM4 versions",
+  "version": "0.2.0",
+  "description": "Node Package Manager with brace expansion that switches between NPM versions, NPM 2 to NPM 6",
   "main": "index.js",
   "bin": {
-    "npmb": "bin/npmb.js",
+    "nb": "bin/nb.js",
+    "nb2": "bin/nb2.js",
+    "nb3": "bin/nb3.js",
+    "nb4": "bin/nb4.js",
+    "nb5": "bin/nb5.js",
+    "nb6": "bin/nb6.js",
     "npmbrace": "bin/npmbrace.js"
   },
   "scripts": {
@@ -14,7 +19,7 @@
     "node": ">=0.10.0",
     "npm": ">=2.0.0"
   },
-  "author": "bisubus",
+  "author": "ex-machine",
   "license": "MIT",
   "homepage": "https://github.com/ex-machine/npmbrace",
   "repository": {
@@ -28,12 +33,14 @@
     "npm"
   ],
   "dependencies": {
+    "@ex-machine/npm2": "^2.0.2",
+    "@ex-machine/npm3": "^3.0.2",
+    "@ex-machine/npm4": "^4.0.2",
+    "@ex-machine/npm5": "^5.0.2",
+    "@ex-machine/npm6": "^6.0.2",
     "braces": "2.0.3",
-    "node-alias": "^1.0.4",
-    "npm-2": "^2.15.0",
+    "node-alias": "1.0.4",
     "npm-cli-path": "1.0.0",
-    "npm3": "^1.1.1",
-    "npm4": "^1.0.0",
     "pify": "2.3.0",
     "pinkie-promise": "2.0.1",
     "read-package-json": "2.0.5"

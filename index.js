@@ -10,19 +10,16 @@ var readPackageJson = pify(require('read-package-json'), Promise, { include: [] 
 var spawn = require('child_process').spawn;
 
 module.exports = function (args) {
-	var npmPackageMap = {
-		2: 'npm-2',
-		3: 'npm3',
-		4: 'npm4'
-	};
+	var NPM_MAJOR_MIN = 2;
+	var NPM_MAJOR_MAX = 6;
 
 	var npmPackage = 'npm';
 
 	var npmVersion = parseInt(args[0]);
 
-	if (npmVersion >= 2 && npmVersion <= 4) {
+	if (npmVersion >= NPM_MAJOR_MIN && npmVersion <= NPM_MAJOR_MAX) {
 		args.shift();
-		npmPackage = npmPackageMap[npmVersion];
+		npmPackage = '@ex-machine/npm' + npmVersion;
 	}
 
 	var expandedArgs = args
